@@ -12,6 +12,9 @@ fun main() {
     )
     val average = getAverage(get)
     println("the average mileage is $average")
+
+    var people= humans()
+    println(people)
 }
 
 
@@ -49,6 +52,12 @@ data class persons(var nam:String,var age:Int,var height:Double,var weight:Int){
 
 //Given a list similar to the one above, write a function in which you will
 //create 2 more people objects and add them to the list at one go.
+fun humans(): List<persons>{
+    var persons4 = persons("Faith",59,5.0,70)
+    var persons5 = persons("Bridget",30,4.2,60)
+    return mutableListOf(persons4, persons5)
+
+}
 
 //Write a function that takes in a list of Car objects each with a
 //registration and mileage attribute and returns the average mileage of
